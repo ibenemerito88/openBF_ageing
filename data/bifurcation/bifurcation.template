@@ -1,0 +1,104 @@
+project name: bifurcation$created
+
+blood:
+  rho: 1060.0 # density [kg/m^3]
+  mu: 4.e-3   # dynamic viscosity [Pa⋅s]
+
+solver:
+  Ccfl: 0.9   # Courant number
+  cycles: 100 # maximum number of cycles
+  jump: 100   # timesteps per cycle to be saved
+  convergence tolerance: 5.0 # percentage value
+
+network:
+
+  - label: No1
+    sn: 1
+    tn: 2
+    L: $l1
+    R0: $r1
+    E: $e1
+    h: $h1
+    inlet: Q
+    inlet file: inlet$dat
+    inlet number: 1    
+
+  - label: No2
+    sn: 2
+    tn: 3
+    L: $l2
+    R0: $r2
+    E: $e2
+    h: $h2
+    outlet: wk2
+    R1: $Rt1
+    Cc: $Cc1
+
+  - label: No3
+    sn: 2
+    tn: 4
+    L: $l3
+    R0: $r3
+    E: $e3
+    h: $h3
+
+  - label: No4
+    sn: 4
+    tn: 5
+    L: $l4
+    R0: $r4
+    E: $e4
+    h: $h4
+
+  - label: No5
+    sn: 4
+    tn: 6
+    L: $l4
+    R0: $r4
+    E: $e4
+    h: $h4
+
+  - label: No6
+    sn: 5
+    tn: 7
+    L: $l6
+    R0: $r6
+    E: $e6
+    h: $h6
+    outlet: wk2
+    R1: $Rt2
+    Cc: $Cc2
+
+  - label: No7
+    sn: 5
+    tn: 8
+    L: $l6
+    R0: $r6
+    E: $e6
+    h: $h6
+    outlet: wk2
+    R1: $Rt2
+    Cc: $Cc2
+
+  - label: No8
+    sn: 6
+    tn: 9
+    L: $l6
+    R0: $r6
+    E: $e6
+    h: $h6
+    outlet: wk2
+    R1: $Rt2
+    Cc: $Cc2
+
+  - label: No9
+    sn: 6
+    tn: 10
+    L: $l6
+    R0: $r6
+    E: $e6
+    h: $h6
+    outlet: wk2
+    R1: $Rt2
+    Cc: $Cc2
+
